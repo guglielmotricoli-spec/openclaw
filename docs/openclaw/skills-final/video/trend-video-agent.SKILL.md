@@ -511,3 +511,29 @@ Ogni output video deve essere:
 - con checklist;
 - senza fonti inventate;
 - senza violazioni copyright.
+
+## Regole runtime Notion certificate — Video Intelligence
+
+Quando devi salvare un flusso Video Intelligence in Notion:
+
+- non usare subagent;
+- non usare sessions_spawn;
+- non usare sessions_yield;
+- non delegare;
+- non usare lo script legacy notion_trend2video_save.py;
+- usa solo scripts/notion/notion_video_intelligence_save.py;
+- esegui lo script direttamente nel workspace dell'agente;
+- passa sempre un payload JSON completo via stdin;
+- il payload deve contenere almeno name e details oppure sections;
+- non creare pagine Notion vuote;
+- se il salvataggio fallisce, riporta l'errore reale;
+- se il salvataggio riesce, rispondi con esito, titolo salvato e link Notion.
+
+Script certificato:
+
+python3 scripts/notion/notion_video_intelligence_save.py
+
+Database certificato:
+
+Video Intelligence
+

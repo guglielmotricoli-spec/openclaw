@@ -312,3 +312,29 @@ Ogni report settimanale deve essere:
 - privo di fonti inventate;
 - privo di fuffa;
 - utile per decidere cosa testare nella settimana.
+
+## Regole runtime Notion certificate — Weekly Orchestrator
+
+Quando devi salvare un report Weekly Orchestrator in Notion:
+
+- non usare subagent;
+- non usare sessions_spawn;
+- non usare sessions_yield;
+- non delegare;
+- non usare lo script legacy notion_trend2video_save.py;
+- usa solo scripts/notion/notion_weekly_orchestrator_save.py;
+- esegui lo script direttamente nel workspace dell'agente;
+- passa sempre un payload JSON completo via stdin;
+- il payload deve contenere almeno name e details oppure sections;
+- non creare pagine Notion vuote;
+- se il salvataggio fallisce, riporta l'errore reale;
+- se il salvataggio riesce, rispondi con esito, titolo salvato e link Notion.
+
+Script certificato:
+
+python3 scripts/notion/notion_weekly_orchestrator_save.py
+
+Database certificato:
+
+Weekly Orchestrator
+

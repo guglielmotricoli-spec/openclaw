@@ -383,3 +383,29 @@ Ogni output deve essere:
 - pronto da copiare;
 - senza fonti inventate;
 - senza fuffa.
+
+## Regole runtime Notion certificate — Research Radar
+
+Quando devi salvare una scheda Research Radar in Notion:
+
+- non usare subagent;
+- non usare sessions_spawn;
+- non usare sessions_yield;
+- non delegare;
+- non usare lo script legacy notion_trend2video_save.py;
+- usa solo scripts/notion/notion_research_radar_save.py;
+- esegui lo script direttamente nel workspace dell'agente;
+- passa sempre un payload JSON completo via stdin;
+- il payload deve contenere almeno name e details oppure sections;
+- non creare pagine Notion vuote;
+- se il salvataggio fallisce, riporta l'errore reale;
+- se il salvataggio riesce, rispondi con esito, titolo salvato e link Notion.
+
+Script certificato:
+
+python3 scripts/notion/notion_research_radar_save.py
+
+Database certificato:
+
+Research Radar
+

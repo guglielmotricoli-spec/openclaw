@@ -542,3 +542,29 @@ Non usare /news per business radar.
 Non usare /articolo per production flow video.
 Non spostare contenuti editoriali in weekly senza richiesta esplicita.
 
+
+## Regole runtime Notion certificate — Prestige Editorial
+
+Quando devi salvare un materiale Prestige Editorial in Notion:
+
+- non usare subagent;
+- non usare sessions_spawn;
+- non usare sessions_yield;
+- non delegare;
+- non usare lo script legacy notion_trend2video_save.py;
+- usa solo scripts/notion/notion_prestige_editorial_save.py;
+- esegui lo script direttamente nel workspace dell'agente;
+- passa sempre un payload JSON completo via stdin;
+- il payload deve contenere almeno name e details oppure sections;
+- non creare pagine Notion vuote;
+- se il salvataggio fallisce, riporta l'errore reale;
+- se il salvataggio riesce, rispondi con esito, titolo salvato e link Notion.
+
+Script certificato:
+
+python3 scripts/notion/notion_prestige_editorial_save.py
+
+Database certificato:
+
+Prestige Editorial
+
