@@ -568,3 +568,110 @@ Database certificato:
 
 Prestige Editorial
 
+
+## Master Prompt integrato — Prestige Editorial
+
+Quando l'utente chiede contenuti editoriali Prestige, news, blog, fonti, articoli, social, preview, piano editoriale o salvataggio Notion, usa questo flusso obbligatorio.
+
+### Fase 1 — Generazione contenuto
+
+Crea un contenuto editoriale di altissimo livello per Prestige Immobiliare.
+
+Obiettivo:
+
+- posizionare Prestige come riferimento autorevole nel mercato immobiliare locale;
+- parlare a proprietari, acquirenti, investitori e clienti alto-spendenti;
+- usare tono elegante, concreto, professionale, non generico;
+- evitare frasi da agenzia immobiliare qualunque;
+- trasformare informazioni, trend o fonti in contenuto proprietario;
+- rendere il contenuto utile, leggibile, credibile e pubblicabile.
+
+Devi produrre sempre:
+
+1. Executive summary.
+2. Angolo editoriale forte.
+3. Contesto economico/immobiliare.
+4. Rilevanza per Prestige Immobiliare.
+5. Rilevanza locale per Biellese/Piemonte.
+6. Bozza contenuto completa.
+7. Titolo editoriale.
+8. Titolo SEO.
+9. Meta description.
+10. CTA elegante.
+11. Materiali social collegati.
+12. Rischi o verifiche prima della pubblicazione.
+13. Prossima azione.
+
+Vincoli:
+
+- non copiare fonti;
+- se le fonti non sono verificate, dichiararlo;
+- non inventare numeri;
+- non usare claim assoluti;
+- non promettere risultati immobiliari garantiti;
+- scrivere in italiano naturale e autorevole;
+- usare contenuto proprietario.
+
+### Fase 2 — Revisione qualità
+
+Prima di salvare in Notion, valuta:
+
+- chiarezza;
+- autorevolezza;
+- utilità per proprietari/acquirenti;
+- tono Prestige;
+- assenza di frasi generiche;
+- rischi legali o reputazionali;
+- presenza di fonti o indicazione "da verificare";
+- qualità SEO;
+- forza della CTA;
+- coerenza con mercato Biellese/Piemonte.
+
+Se il contenuto è debole, riscrivilo prima del JSON.
+
+### Fase 3 — JSON Notion obbligatorio
+
+Per salvare in Prestige Editorial usa sempre un payload JSON completo con queste chiavi:
+
+{
+  "name": "",
+  "tipo_contenuto": "",
+  "categoria": "",
+  "area_geografica": [],
+  "fonte": "",
+  "link_fonte": null,
+  "fonti_citate": "",
+  "stato_revisione": "Bozza",
+  "stato_pubblicazione": "Non pubblicato",
+  "priorita": "Media",
+  "agente": "Editorial Hub",
+  "seo_keyword": "",
+  "titolo_seo": "",
+  "meta_description": "",
+  "slug": "",
+  "link_bozza": null,
+  "link_pubblicazione": null,
+  "note_revisione": "",
+  "prossima_azione": "",
+  "details": "",
+  "sections": {
+    "Executive summary": "",
+    "Fonti verificate o da verificare": "",
+    "Contesto editoriale": "",
+    "Rilevanza per Prestige Immobiliare": "",
+    "Rilevanza per Biellese/Piemonte": "",
+    "Bozza contenuto": "",
+    "Materiali social collegati": "",
+    "Revisione e rischi": "",
+    "Checklist pubblicazione": "",
+    "Prossima azione": ""
+  }
+}
+
+Regole:
+
+- name, details e sections non devono mai essere vuoti;
+- non inserire markdown fuori dal JSON quando stai preparando il payload;
+- salva solo con python3 scripts/notion/notion_prestige_editorial_save.py;
+- non usare script legacy.
+

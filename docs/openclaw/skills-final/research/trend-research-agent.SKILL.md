@@ -409,3 +409,113 @@ Database certificato:
 
 Research Radar
 
+
+## Master Prompt integrato — Research Radar
+
+Quando l'utente chiede opportunità business, trend, market scan, landing plan, funnel plan, MVP plan o salvataggio Notion, usa questo flusso obbligatorio.
+
+### Fase 1 — Generazione contenuto
+
+Crea un'opportunità business concreta, monetizzabile e validabile.
+
+Devi produrre sempre:
+
+1. Executive summary.
+2. Trend intercettato.
+3. Perché è rilevante adesso.
+4. Target preciso.
+5. Problema doloroso.
+6. Soluzione.
+7. Offerta monetizzabile.
+8. Modello di ricavo.
+9. Pricing.
+10. MVP in 7 giorni.
+11. Landing page.
+12. Funnel.
+13. Canali di acquisizione.
+14. Competitor o benchmark da verificare.
+15. Rischi.
+16. Metriche da misurare.
+17. Piano operativo 7 giorni.
+18. Prossima azione.
+
+Vincoli:
+
+- non inventare dati;
+- distinguere fatti, ipotesi e cose da verificare;
+- privilegiare opportunità con esecuzione rapida;
+- evitare idee generiche;
+- produrre output concreto, non motivazionale.
+
+### Fase 2 — Revisione qualità
+
+Prima di salvare in Notion, valuta:
+
+- concretezza;
+- monetizzazione;
+- urgenza del problema;
+- chiarezza del target;
+- fattibilità MVP;
+- forza della landing;
+- canali realistici;
+- rischi;
+- metriche;
+- possibilità di test in 7 giorni.
+
+Se il contenuto è debole, riscrivilo prima del JSON.
+
+### Fase 3 — JSON Notion obbligatorio
+
+Per salvare in Research Radar usa sempre un payload JSON completo con queste chiavi:
+
+{
+  "name": "",
+  "tipo": "Business Plan",
+  "categoria": "",
+  "target": "",
+  "trend": "",
+  "problema": "",
+  "soluzione": "",
+  "mercato": "",
+  "modello_ricavo": "",
+  "priorita": "Media",
+  "potenziale": "3",
+  "difficolta": "3",
+  "stato_produzione": "Idea",
+  "fonte": "",
+  "link_fonte": null,
+  "fonti_da_verificare": "",
+  "link_output": null,
+  "prossima_azione": "",
+  "details": "",
+  "sections": {
+    "Executive summary": "",
+    "Trend intercettato": "",
+    "Fonti verificate o da verificare": "",
+    "Perché è rilevante adesso": "",
+    "Mercato": "",
+    "Target": "",
+    "Problema": "",
+    "Soluzione": "",
+    "Offerta monetizzabile": "",
+    "Modello di ricavo": "",
+    "Pricing": "",
+    "MVP in 7 giorni": "",
+    "Landing page": "",
+    "Funnel": "",
+    "Canali di acquisizione": "",
+    "Competitor o benchmark da verificare": "",
+    "Rischi": "",
+    "Metriche da misurare": "",
+    "Piano operativo 7 giorni": "",
+    "Prossima azione": ""
+  }
+}
+
+Regole:
+
+- name, details e sections non devono mai essere vuoti;
+- non inserire markdown fuori dal JSON quando stai preparando il payload;
+- salva solo con python3 scripts/notion/notion_research_radar_save.py;
+- non usare script legacy.
+

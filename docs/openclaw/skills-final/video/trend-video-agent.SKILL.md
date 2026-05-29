@@ -537,3 +537,115 @@ Database certificato:
 
 Video Intelligence
 
+
+## Master Prompt integrato — Video Intelligence
+
+Quando l'utente chiede video trend, remix, storyboard, script, prompt LTX, prompt Easy-Peasy AI, prompt Magnific, prompt Freepik, task Manus o salvataggio Notion, usa questo flusso obbligatorio.
+
+### Fase 1 — Generazione contenuto
+
+Crea un flusso video originale, producibile e adatto a short-form o AI video.
+
+Devi produrre sempre:
+
+1. Obiettivo video.
+2. Target.
+3. Fonti video verificate o da verificare.
+4. Query di ricerca video.
+5. Analisi format.
+6. Hook.
+7. Script completo.
+8. Storyboard scena per scena.
+9. Shot list.
+10. Prompt LTX Studio scena per scena.
+11. Negative prompt scena per scena.
+12. Prompt Magnific.
+13. Prompt Freepik.
+14. Prompt Easy-Peasy AI.
+15. Task Manus.
+16. Asset reference.
+17. Diagramma Mermaid.
+18. Caption e CTA.
+19. Checklist produzione.
+20. Nota copyright e originalità.
+21. Prossima azione.
+
+Vincoli:
+
+- non copiare video esistenti;
+- creare remix originale;
+- indicare rischi copyright;
+- usare prompt visivi ricchi e specifici;
+- mantenere coerenza scena per scena;
+- produrre output pratico da copiare nei tool.
+
+### Fase 2 — Revisione qualità
+
+Prima di salvare in Notion, valuta:
+
+- forza dell'hook;
+- originalità;
+- producibilità;
+- coerenza storyboard;
+- qualità prompt LTX;
+- chiarezza shot list;
+- rischio copyright;
+- CTA;
+- potenziale virale;
+- compatibilità con TikTok, Reels e Shorts.
+
+Se il flusso è debole, riscrivilo prima del JSON.
+
+### Fase 3 — JSON Notion obbligatorio
+
+Per salvare in Video Intelligence usa sempre un payload JSON completo con queste chiavi:
+
+{
+  "name": "",
+  "tipo": "Production Flow",
+  "target": "",
+  "trend": "",
+  "piattaforma": [],
+  "tool": [],
+  "fonte_video": "",
+  "link_fonte_video": null,
+  "copyright_risk": "Da verificare",
+  "priorita": "Media",
+  "potenziale": "3",
+  "difficolta": "3",
+  "stato_produzione": "Da produrre",
+  "link_output": null,
+  "prossima_azione": "",
+  "details": "",
+  "sections": {
+    "Obiettivo video": "",
+    "Target": "",
+    "Fonti video verificate o da verificare": "",
+    "Query di ricerca video": "",
+    "Analisi format": "",
+    "Hook": "",
+    "Script completo": "",
+    "Storyboard scena per scena": "",
+    "Shot list": "",
+    "Prompt LTX Studio scena per scena": "",
+    "Negative prompt scena per scena": "",
+    "Prompt Magnific": "",
+    "Prompt Freepik": "",
+    "Prompt Easy-Peasy AI": "",
+    "Task Manus": "",
+    "Asset reference": "",
+    "Diagramma Mermaid": "",
+    "Caption e CTA": "",
+    "Checklist produzione": "",
+    "Nota copyright e originalità": "",
+    "Prossima azione": ""
+  }
+}
+
+Regole:
+
+- name, details e sections non devono mai essere vuoti;
+- non inserire markdown fuori dal JSON quando stai preparando il payload;
+- salva solo con python3 scripts/notion/notion_video_intelligence_save.py;
+- non usare script legacy.
+

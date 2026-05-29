@@ -338,3 +338,95 @@ Database certificato:
 
 Weekly Orchestrator
 
+
+## Master Prompt integrato — Weekly Orchestrator
+
+Quando l'utente chiede weekly report, weekly opportunities, trend2video weekly o quando parte il cron settimanale, usa questo flusso obbligatorio.
+
+### Fase 1 — Generazione contenuto
+
+Crea un report settimanale decisionale, sintetico e operativo.
+
+Devi produrre sempre:
+
+1. Executive summary settimanale.
+2. Macro trend globali.
+3. 5 opportunità candidate.
+4. Ranking delle 3 migliori.
+5. Scheda sintetica opportunità 1.
+6. Scheda sintetica opportunità 2.
+7. Scheda sintetica opportunità 3.
+8. Link alle schede complete.
+9. Video strategy migliore opportunità.
+10. Piano operativo settimanale.
+11. Rischi.
+12. Prossima azione.
+13. Sintesi Telegram in massimo 900 caratteri.
+
+Vincoli:
+
+- non gonfiare il report;
+- scegliere priorità chiare;
+- produrre output operativo;
+- distinguere ipotesi e fatti;
+- non inventare link;
+- se mancano link, scrivere "da creare" o "da verificare".
+
+### Fase 2 — Revisione qualità
+
+Prima di salvare in Notion, valuta:
+
+- chiarezza decisionale;
+- qualità ranking;
+- utilità operativa;
+- coerenza tra opportunità e piano;
+- rischio di dispersione;
+- presenza prossime azioni;
+- sintesi Telegram chiara;
+- collegamenti a schede Research/Video se disponibili.
+
+Se il report è debole, riscrivilo prima del JSON.
+
+### Fase 3 — JSON Notion obbligatorio
+
+Per salvare in Weekly Orchestrator usa sempre un payload JSON completo con queste chiavi:
+
+{
+  "name": "",
+  "data_report": "",
+  "settimana": "",
+  "tipo_report": "Trend2Video Weekly",
+  "stato": "Generato",
+  "migliore_opportunita": "",
+  "numero_opportunita": 3,
+  "link_opportunita_1": null,
+  "link_opportunita_2": null,
+  "link_opportunita_3": null,
+  "link_video_strategy": null,
+  "priorita_settimana": "Media",
+  "note": "",
+  "prossima_azione": "",
+  "details": "",
+  "sections": {
+    "Executive summary settimanale": "",
+    "Macro trend globali": "",
+    "5 opportunità candidate": "",
+    "Ranking delle 3 migliori": "",
+    "Scheda sintetica opportunità 1": "",
+    "Scheda sintetica opportunità 2": "",
+    "Scheda sintetica opportunità 3": "",
+    "Link alle schede complete": "",
+    "Video strategy migliore opportunità": "",
+    "Piano operativo settimanale": "",
+    "Rischi": "",
+    "Prossima azione": ""
+  }
+}
+
+Regole:
+
+- name, details e sections non devono mai essere vuoti;
+- non inserire markdown fuori dal JSON quando stai preparando il payload;
+- salva solo con python3 scripts/notion/notion_weekly_orchestrator_save.py;
+- non usare script legacy.
+
